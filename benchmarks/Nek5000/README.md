@@ -73,6 +73,8 @@ The test case (under subfolder [pnpn/](pnpn/))
 considered is the turbulent flow in a straight pipe, a
 generic and widely known case across the CFD community. The flow is
 run with a friction Reynolds number of 1000 and 1,264,032 elements.
+A strong scaling study of this case has been 
+[published previously](https://dl.acm.org/doi/10.1145/2938615.2938617).
 
 ### Running the benchmark
 
