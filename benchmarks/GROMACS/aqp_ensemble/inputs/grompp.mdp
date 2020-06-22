@@ -1,0 +1,164 @@
+
+integrator               = md
+tinit                    = 0
+dt			  = 0.0025
+nsteps                   = -1
+
+nstxout                  = 0
+nstxout-compressed	 = 20000
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 200000
+
+cutoff-scheme		 = Verlet
+nstlist			 = 40
+rlist			 = 1.2
+ns-type                  = grid
+pbc                      = xyz
+periodic_molecules       = no
+
+coulombtype              = PME
+coulomb-modifier         = Potential-shift-Verlet
+rcoulomb                 = 1.2
+
+vdw-type		 = cut-off	
+vdw-modifier             = force-switch 
+rvdw-switch		 = 1.0
+rvdw                     = 1.2
+
+DispCorr                 = no
+fourierspacing           = 0.14
+pme_order                = 4
+ewald-rtol               = 1e-6
+
+tcoupl                   = v-rescale
+tc-grps                  = Protein POPC AMM_Water_and_ions
+tau-t                    = 0.1 0.1 0.1
+ref-t                    = 310 310 310
+
+Pcoupl                   = berendsen; Parrinello-Rahman
+Pcoupltype               = semiisotropic
+nstpcouple		 = 20
+tau-p                    = 5
+compressibility          = 4.5e-5 4.5e-5
+ref-p                    = 1.0 1.0
+refcoord_scaling         = COM
+
+gen-vel                  = no 		; !autoset
+constraints              = h-bonds
+constraint-algorithm     = Lincs
+lincs-order              = 4
+lincs-iter		 = 1
+
+; These options remove motion of the protein/bilayer relative to the solvent/ions
+nstcomm		= 200
+nstcalcenergy	= 200
+nstenergy	= 4000
+comm-mode	= Linear
+comm-grps	= Protein_POPC AMM_Water_and_ions
+
+
+; PMF calculation
+pull                    = yes
+pull_nstfout            = 0
+pull_nstxout            = 2000
+pull-print-ref-value 	= yes
+pull-pbc-ref-prev-step-com = yes
+
+; The atom groups
+pull_ngroups            = 8    ; 2x4
+pull-group1-name        =  a_1-3376_&_MainChain
+pull-group1-pbcatom	= 2787
+pull-group2-name        = r_21475
+pull-group3-name        =  a_3377-6752_&_MainChain
+pull-group3-pbcatom	= 6163		    
+pull-group4-name        = r_21476
+pull-group5-name        =  a_6753-10128_&_MainChain
+pull-group5-pbcatom	= 9539
+pull-group6-name        = r_21477
+pull-group7-name        = a_10129-13504_&_MainChain
+pull-group7-pbcatom	= 12915                   
+pull-group8-name        = r_21478
+
+; Pull coords (reaction coord)
+pull_ncoords            = 4
+
+pull-coord1-groups      = 1 2                       ; monomer 1
+pull-coord1-type	= external-potential
+pull-coord1-potential-provider = AWH
+pull_coord1-start              = yes
+pull-coord1-geometry    = direction
+pull-coord1-dim         = n n y
+pull-coord1-vec		= 0 0 1
+
+pull-coord2-groups      = 3 4                       ; monomer 2
+pull-coord2-type	= external-potential
+pull-coord2-potential-provider = AWH
+pull_coord2-start              = yes
+pull-coord2-geometry    = direction
+pull-coord2-dim         = n n y
+pull-coord2-vec		= 0 0 1
+
+pull-coord3-groups      = 5 6                       ; monomer 3
+pull-coord3-type	= external-potential
+pull-coord3-potential-provider = AWH
+pull_coord3-start              = yes
+pull-coord3-geometry    = direction
+pull-coord3-dim         = n n y
+pull-coord3-vec		= 0 0 1
+
+pull-coord4-groups      = 7 8                       ; monomer 4
+pull-coord4-type	= external-potential
+pull-coord4-potential-provider = AWH
+pull_coord4-start              = yes
+pull-coord4-geometry    = direction
+pull-coord4-dim         = n n y
+pull-coord4-vec		= 0 0 1
+
+; AWH 
+awh                     = yes
+awh-nbias               = 4         ; 4 awh instances in one sim
+awh-nstsample           = 10        ; take a sample every 10 steps
+awh-nsamples-update     = 100       ; AWH update and communication every 10 samples
+awh-nstout              = 2000000   ; awh output at same times
+awh-share-multisim      = yes
+
+; bias 1 <-> monomer 1
+awh1-ndim               = 1
+awh1-error-init          = 3
+awh1-dim1-coord-index   = 1
+awh1-dim1-diffusion     = 1e-4
+awh1-dim1-start        = -2
+awh1-dim1-end          = 2.
+awh1-dim1-force-constant = 1000
+awh1-share-group       = 1
+
+; bias 2 <-> monomer 2 (+)
+awh2-ndim               = 1
+awh2-error-init          = 3
+awh2-dim1-coord-index   = 2
+awh2-dim1-diffusion     = 1e-4
+awh2-dim1-start        = -2
+awh2-dim1-end          = 2.
+awh2-dim1-force-constant = 1000
+awh2-share-group       = 2
+
+; bias 3 <-> monomer 3 (-)
+awh3-ndim               = 1
+awh3-error-init          = 3
+awh3-dim1-coord-index   = 3
+awh3-dim1-diffusion     = 1e-4
+awh3-dim1-start        = -2.
+awh3-dim1-end          = 2
+awh3-dim1-force-constant = 1000
+awh3-share-group       = 3
+
+; bias 4 <-> monomer 4 (-)
+awh4-ndim               = 1
+awh4-error-init          = 3
+awh4-dim1-coord-index   = 4
+awh4-dim1-diffusion     = 1e-4
+awh4-dim1-start        = -2.
+awh4-dim1-end          = 2
+awh4-dim1-force-constant = 1000
+awh4-share-group       = 4

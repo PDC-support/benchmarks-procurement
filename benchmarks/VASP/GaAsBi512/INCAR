@@ -1,0 +1,34 @@
+SYSTEM = GaAs 
+ISTART = 0
+ICHARG = 2
+PREC = Accurate 
+ENCUT = 313
+ISMEAR = 0
+ISPIN = 1
+ALGO=fast 
+LCHARG = .FALSE.
+LWAVE = .FALSE.
+LREAL = Auto
+
+# Makes sure to run 13 iterations:
+NELMIN = 13
+NELM   = 13
+
+
+# Parameters which can be changed here below,
+# check README.vasp for information
+
+# NBANDS must be equal to or larger than 1536 
+# confirm its value after a run with:
+# grep NBANDS= OUTCAR
+NBANDS = 1536 
+
+# NSIM default VASP value is 4. Test for optimal value
+NSIM = 4
+
+# NCORE must be set to a value here, typically the number of 
+# cores per node which is used in the calculation
+NCORE = 16
+
+# k-point parallelization, can be 2, 4 or commented out
+KPAR = 4

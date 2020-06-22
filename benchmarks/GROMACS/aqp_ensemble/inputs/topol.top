@@ -1,0 +1,31 @@
+#include "./charmm36-mar2014-mod-vs.ff/forcefield.itp"
+#include "./itps/ammonia-charmm.itp"
+#include "./itps/popc.itp"
+#include "./itps/prot_Protein_chain_A.itp"
+; Include water topology
+#include "./charmm36-mar2014-mod-vs.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./charmm36-mar2014-mod-vs.ff/ions.itp"
+
+[ system ]
+prot and bilayer membed
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     4
+POPC              252
+SOL    20860
+K                12
+K                  56
+CL                 56
+AMMONIA 1
+AMMONIA 1
+AMMONIA 1
+AMMONIA 1

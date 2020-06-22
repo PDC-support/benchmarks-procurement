@@ -1,0 +1,19 @@
+The system consist of the EAG1 membrane protein embedded in a lipid bilayer.
+The EAG1 ion channel is part of the KCNH family of voltage-gated potassium channels. In
+addition to voltage, it is also gated by calmodulin, a small Ca2+-sensing protein.
+EAG is a prevalent central nervous system channel, and its malfunction is strongly linked
+to cancer propagation which makes it a suitable marker for cancer [1].
+This benchmark system consists of approximately 615900 atoms and it is representative of
+the larger end of the spectrum of biomolecular simulation systems.
+
+The system is challenging for strong scaling as, strong scaling is critical to achieving
+useful performance and,  while the particle interactions can scale to >6-10k) cores, the
+3D FFT computation becomes very sensitive to network performance.
+
+The simulation uses 2 fs time step with h-bonds constrained.
+
+
+[1] Farias L.M., Ocana D.B., Diaz L., Larrea F., Avila-Chavez E., Cadena A., Hinojosa L.M., Lara G.,
+Villanueva L.A., Vargas C., Hernandez-Gallegos E., Camacho-Arroyo I., Duenas-Gonzalez A., Perez-
+Cardenas E., Pardo L.A., Morales A., Taja-Chayeb L., Escamilla J., Sanchez-Pena C., Camacho J. Ether
+a go-go potassium channels as human cervical cancer markers. Cancer Res. 64:6996–7001, (2004)

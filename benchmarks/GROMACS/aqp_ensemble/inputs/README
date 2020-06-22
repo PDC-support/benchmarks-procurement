@@ -1,0 +1,25 @@
+This system is a membrane protein Aquaporin, a tetrameric ion channel
+embedded in a lipid bilayer. 
+Aquaporins are proteins found in cells of all types of organisms and
+regulate the transport of fluids between cells or organelles, a function
+fundamental for all life.
+The system was used in microsecond-long simulations with aiming to
+carry out mutational studies exploring the structural origins of
+aquaporin ammonia selectivity [1].
+
+In such a study a number of mutations are introduced in the protein
+creating several variants of the system along the original (included here)
+each of which is simulated independently. 
+Thanks to the AWH enhanced sampling method, individual simulations
+for a specific mutation can themselves be composed of an
+ensemble computation made up by multiple simulations, here 32.
+This improve sampling beyond what faster simulations through strong
+scaling allows.
+
+This simulation use a 2.5 femtosecond time step and h-bond constraints.
+The system contains roughly 100,000 atoms and therefore very challenging
+for strong scaling.
+
+[1] Lindahl, Viveca & Gourdon, Pontus & Andersson, Magnus & Hess, Berk. (2018).
+Permeability and ammonia selectivity in aquaporin TIP2;1: Linking structure to
+function. Scientific Reports. 8. 10.1038/s41598-018-21357-2. 

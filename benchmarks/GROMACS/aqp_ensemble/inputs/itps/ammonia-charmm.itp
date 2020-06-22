@@ -1,0 +1,47 @@
+[ atomtypes ]
+;name	at.num	mass	charge	ptype	sigma	epsilon
+HPA3	1	1.008000	0.375000	A	0.155016376956	0.050208 
+N331	7	14.00700	-1.125000	A	0.352795892384	0.29288 
+
+[ bondtypes ]
+; i	j	func	b0	kb
+HPA3	N331	1	0.1014	381162.4
+
+[ angletypes ]
+; i	j	k	func	th0	cth	ub0	cub
+HPA3	N331	HPA3	5	107.10	242.672	0.0	0.0
+
+[ dihedraltypes ]
+; i	j	k	l	func	phi0	cp	mult
+
+[ dihedraltypes ]
+; i	j	k	l	func	q0	cq
+[ moleculetype ]
+; Name            nrexcl
+AMMONIA	3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 AMM rtp AMM  q  0.0
+     1       N331      1    AMM      N      1     -1.125     14.007   ; qtot -1.125
+     2       HPA3      1    AMM     H1      2      0.375      1.008   ; qtot -0.75
+     3       HPA3      1    AMM     H2      3      0.375      1.008   ; qtot -0.375
+     4       HPA3      1    AMM     H3      4      0.375      1.008   ; qtot 0
+
+[ bonds ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     2     1 
+    1     3     1 
+    1     4     1 
+
+[ angles ]
+;  ai    aj    ak funct            c0            c1            c2            c3
+    2     1     3     5 
+    2     1     4     5 
+    3     1     4     5 
+
+#ifdef POSRES_AMM
+[ position_restraints ]
+; atom  type      fx      fy      fz
+     1     1  1000  1000  1000
+#endif
