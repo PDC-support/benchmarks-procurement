@@ -6,21 +6,16 @@ used in the procurement process for a new PDC system in 2020-2021.
 The benchmark suite is composed of *throughput* and *strong-scaling*
 benchmark cases which differ in how they should be run and in the 
 figure of merit on which they will be evaluated.  
-A detailed description of how the figures of merit should be 
-obtained can be found in the document
+A detailed description of how the figures of merit for each 
+type of benchmark should be obtained can be found in the document
 [benchmark-description.pdf](./benchmark-description.pdf).
 
-Points will be awarded to tenders based on reported performance on all
+A score will be awarded to tenders based on reported performance on all
 application benchmarks as well as the SingleFFT synthetic benchmark.
 Each application benchmark case has been assigned a maximum number of
-points based on historical usage of PDC and SNIC resources. Maximum
-points for each case will be awarded to the tender with the best
-performance for that case, and other tenders will receive points
-relative to the best performance. A Total Score will be calculated as
-the sum of total benchmark score and the score obtained from other
-evaluation criteria in section XXX. An elimination process will be
-used to successively remove lowest-scoring tenders until one tender
-remains.
+points based on historical usage of PDC and SNIC resources. 
+A description of the scoring and ranking process is provided in the 
+procurement document.
 
 The list of synthetic benchmarks contains standard benchmark tests.
 These will be evaluated as should-requirements or must-requirements.
