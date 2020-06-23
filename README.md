@@ -1,17 +1,26 @@
-# Benchmarks
+# Benchmarks for PDC procurement
 
-This benchmark suite is composed of application benchmarks and
-synthetic benchmarks. The list of application benchmarks contains
-research software packages heavily used in HPC.
-These benchmarks fall into two classes:
+This repository contains information about the benchmark suite 
+used in the procurement process for a new PDC system in 2020-2021.
 
-- Throughput benchmarks
-- Strong-scaling benchmarks
+The benchmark suite is composed of *throughput* and *strong-scaling*
+benchmark cases which differ in how they should be run and in the 
+figure of merit on which they will be evaluated.  
+A detailed description of how the figures of merit should be 
+obtained can be found in the document
+[benchmark-description.pdf](./benchmark-description.pdf).
 
-A detailed description of how these different types of benchmarks are
-evaluated and how the individual benchmark cases are scored can be
-found in the document
-[benchmark-evaluation.pdf](./benchmark-evaluation.pdf).
+Points will be awarded to tenders based on reported performance on all
+application benchmarks as well as the SingleFFT synthetic benchmark.
+Each application benchmark case has been assigned a maximum number of
+points based on historical usage of PDC and SNIC resources. Maximum
+points for each case will be awarded to the tender with the best
+performance for that case, and other tenders will receive points
+relative to the best performance. A Total Score will be calculated as
+the sum of total benchmark score and the score obtained from other
+evaluation criteria in section XXX. An elimination process will be
+used to successively remove lowest-scoring tenders until one tender
+remains.
 
 The list of synthetic benchmarks contains standard benchmark tests.
 These will be evaluated as should-requirements or must-requirements.
@@ -70,24 +79,6 @@ More details can be found in
   - Tests metadata operations of a filesystem.
   - Verifying must-requirements in section XXX.
 
-
-## Scoring
-
-Points will be awarded to tenders based on reported performance on all
-application benchmarks as well as the SingleFFT synthetic benchmark.
-Each application benchmark case has been assigned a maximum number of
-points based on historical usage of PDC and SNIC resources. Maximum
-points for each case will be awarded to the tender with the best
-performance for that case, and other tenders will receive points
-relative to the best performance. A Total Score will be calculated as
-the sum of total benchmark score and the score obtained from other
-evaluation criteria in section XXX. An elimination process will be
-used to successively remove lowest-scoring tenders until one tender
-remains.
-
-Details of the scoring procedure and a list of available Maximum
-points for all benchmark cases are provided in the file
-[benchmark-evaluation.pdf](./benchmark-evaluation.pdf).
 
 ## Benchmark report
 

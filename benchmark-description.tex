@@ -10,16 +10,26 @@
  bottom=30mm
  }
 \begin{document}
-\title{Evaluation of benchmarks}
+\title{Benchmark description}
 %\institute{PDC Center for High-Performance computing, KTH, Stockholm}
 
 \maketitle
 
 \section*{Throughput and strong-scaling benchmarks}
 
-All application benchmarks belong to one of two classes: \textit{throughput} and \textit{strong-scaling}.
+This benchmark suite is composed of application benchmarks and
+synthetic benchmarks. The list of application benchmarks contains
+research software packages heavily used in HPC, i.e. Gromacs, 
+Nek5000, VASP, PowerFLOW, Converge, PyFR and CP2K-Quickstep.
 
-\subsubsection*{Throughput}
+These benchmarks fall into two classes depending on how they 
+should be run and how they will be evaluated:
+\begin{itemize}
+\item Throughput benchmarks
+\item Strong-scaling benchmarks
+\end{itemize}
+
+\subsubsection*{Throughput benchmarks}
 
 \begin{itemize}
     \item Use case: regular HPC research where a certain number of jobs need to be completed in order to finish a research project, without wasting core hours. 
@@ -43,7 +53,7 @@ All application benchmarks belong to one of two classes: \textit{throughput} and
 The throughput tests represent a trade-off between maximizing the number of nodes in the system, minimizing the time it takes to run one job and minimize the number of nodes used for each job. Each
 throughput benchmark case has a specified minimum performance which most likely requires it to be run on more than one node.
 
-\subsubsection*{Strong Scaling}
+\subsubsection*{Strong scaling benchmarks}
 
 \begin{itemize}
     \item Use case: Researcher needs to finish a massively parallel job in the shortest possible time. The researcher has access to the entire system.
@@ -63,7 +73,7 @@ throughput benchmark case has a specified minimum performance which most likely 
 In the strong scaling benchmarks the goal is simply to minimize the runtime of the benchmark cases by using as many nodes/cores/devices as required to maximize performance.\\
 
 The calculation of the throughput and strong-scaling figures of merit
-is clarified in the documentation for each benchmark case.
-
+for each benchmark case is clarified in the corresponding benchmark 
+documentation.
 
 \end{document}
