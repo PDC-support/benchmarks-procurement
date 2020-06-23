@@ -34,7 +34,7 @@ All application benchmarks belong to one of two classes: \textit{throughput} and
         \item $t(\textrm{b})$ = average time in seconds to run one job for benchmark $b$
         \item $N_{\textrm{tot}}$ = total number of nodes tendered
         \item $N(b)$ = number of nodes used to run benchmark $b$
-        \item $n_{\textrm{jobs}}(b)$ = number of jobs that can be run in a day for benchmark $b$. This result should be reported for each throughput benchmark in the benchmark matrix spreadsheet.
+        \item $n_{\textrm{jobs}}(b)$ = number of jobs that can be run in a day for benchmark $b$. This result must be reported for each throughput benchmark in the benchmark matrix spreadsheet.
     \end{itemize}
     \item All throughput benchmarks have a \textbf{minimum performance} to ensure that more than one node needs to be used.
 
@@ -56,12 +56,14 @@ throughput benchmark case has a specified minimum performance which most likely 
     \begin{itemize}
         \item $t_{\textrm{day}}$ = time in a day (86400 s)
         \item $t(b)$ = average time in seconds to run one job in the shortest possible time for benchmark $b$
-        \item $n_{\textrm{jobs}}(b)$ = number of jobs that can be run in one day for benchmark $b$. This result should be reported for each strong-scaling benchmark in the benchmark matrix spreadsheet.
+        \item $n_{\textrm{jobs}}(b)$ = number of jobs that can be run in one day for benchmark $b$. This result must be reported for each strong-scaling benchmark in the benchmark matrix spreadsheet.
     \end{itemize}
 \end{itemize}
 
-In the strong scaling benchmarks the goal is simply to minimize the runtime of the benchmark cases by using as many nodes/cores/devices as required to maximize performance.
+In the strong scaling benchmarks the goal is simply to minimize the runtime of the benchmark cases by using as many nodes/cores/devices as required to maximize performance.\\
 
+The calculation of the throughput and strong-scaling figures of merit
+is clarified in the documentation for each benchmark case.
 
 \section*{Scoring}
 
