@@ -1,4 +1,4 @@
-# Benchmarks for PDC procurement
+# Benchmark suite for PDC procurement
 
 This repository contains information about the benchmark suite 
 used in the procurement process for a new PDC system in 2020-2021.
@@ -17,38 +17,17 @@ points based on historical usage of PDC and SNIC resources.
 A description of the scoring and ranking process is provided in the 
 procurement document.
 
+The benchmark suite is composed of application benchmarks and
+synthetic benchmarks. The list of application benchmarks contains
+research software packages heavily used in HPC, i.e. Gromacs, 
+Nek5000, VASP, PowerFLOW, Converge, PyFR and CP2K-Quickstep, 
+see [the list of application benchmarks](application-benchmarks.md)
+for an overview of all application benchmark cases.
+
+
 The list of synthetic benchmarks contains standard benchmark tests.
 These will be evaluated as should-requirements or must-requirements.
 
-## Application benchmark codes and cases
-
-#### Phase 1
-
-- [Gromacs](./benchmarks/GROMACS/)
-  - EAG1 membrane protein (strong scaling) 
-  - Membrane protein Aquaporin (throughput)
-- [Nek5000](./benchmarks/Nek5000/)
-  - Pipe simulation case (strong scaling)
-- [VASP](./benchmarks/VASP)
-  - Standard case GaAsBi with 512 atoms (throughput)
-- [PowerFLOW](./benchmarks/PowerFLOW/)
-  - BC\_01 (throughput)
-
-#### Scania option
-- [Converge](./benchmarks/Converge/)
-  - Scania test case (strong scaling)
-  - This benchmark will only be used to decide size of the option for the collaboration with Scania.
-
-#### Phase 2
-
-- [Gromacs](./benchmarks/GROMACS/)
-  - EAG1 membrane protein (strong scaling) 
-  - Membrane protein Aquaporin (throughput)
-- [PyFR](./benchmarks/PyFR/)
-  - NACA0021 Aerofoil single precision (strong scaling)
-  - NACA0021 Aerofoil double precision (strong scaling)
-- [CP2K-Quickstep](./benchmarks/CP2K/)
-  - Linear scaling DFT, standard case (throughput)
 
 ## Synthetic benchmarks
 
