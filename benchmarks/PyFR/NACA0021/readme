@@ -1,3 +1,5 @@
 # NACA0021 PyFR benchmark case
 
-The mesh and restart files will be made available on KTH-Box.
+The mesh and restart files are provided in the file archive
+NACA0021.tar.gz on KTH-Box. An access password for KTH-Box can be
+found in the procurement document.
