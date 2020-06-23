@@ -24,7 +24,7 @@ webpage](http://manual.gromacs.org) with the most recent release under
 the ["Latest releases
 section"](http://manual.gromacs.org/#latest-releases).
 
-**For the benchmarks the GROMACS 2020.1 release should be used.**
+**For the benchmarks the GROMACS 2020.1 release must be used.**
 
 ### License
 
@@ -111,9 +111,9 @@ guide](http://manual.gromacs.org/documentation/2020/user-guide/mdrun-performance
 The ensemble benchmark will be evaluated as a throughput benchmark 
 and thus requires a minimum performance:
 
-- On phase 1, the performance of an individual run should not be 
+- On phase 1, the performance of an individual run must not be 
   less than 80 ns/day.
-- On phase 2, the performance of an individual run should not be 
+- On phase 2, the performance of an individual run must not be 
   less than 200 ns/day.
 
 The strong scaling benchmark does not have a minimum performance.
@@ -131,7 +131,7 @@ row starting with "Performance:" at the end of the ``mdrun`` log.
 The simulation length can be specified using either:
 - as the number of iterations with the ``-nsteps N`` option or
 - as the simulation wall-time in hours using ``-nsteps -1 -max T``.
-Note that benchmarks should be executed for sufficiently long time
+Note that benchmarks must be executed for sufficiently long time
 such that both factors external (e.g. processor temperature and clock
 throttle) as well as internal to simulation (e.g. load-balancer) reach
 a stable state.  It is beneficial to exclude this short initial phase
@@ -144,7 +144,7 @@ on phase 1 and phase 2) in a one day. This number should represent an
 average and does not need to be an integer.
 **One job for this ensemble benchmark is considered to be a 10 ns simulation.**
 To calculate the number of jobs per day the throughput formula 
-should be used:  
+must be used:  
 `n_{jobs} = t_{day} / t * N_{tot} / N`  
 where
 - `t_{day}` = time in a day (86400 s)
@@ -160,7 +160,7 @@ For example, if the observed performance
 of a run is 90 ns/day, the factor `t_{day} / t` becomes  
 `86400 s / (10 ns / 90 ns/day * 86400 s/day) = 90/10 = 9`.  
 To calculate the throughput metric `n_{jobs}`, this factor should 
-then be multiplied by `N_{tot} / N`. The resulting value should be 
+then be multiplied by `N_{tot} / N`. The resulting value must be 
 entered into the benchmark matrix spreadsheet, separately for phase 
 1 and phase 2.
 
@@ -173,7 +173,7 @@ This number should represent an
 average and does not need to be an integer.  **One job for this
 strong-scaling benchmark is considered to be a 10 ns simulation**.  
 To calculate the number of jobs per day the strong-scaling formula
-should be used:  
+must be used:  
 `n_{jobs} = t_{day} / t`   
 where 
 - t_{day} = time in a day (86400 s)
@@ -183,7 +183,7 @@ where
 In the same manner as for the throughput ensemble benchmark, the factor 
 `t_{day} / t` can be expressed as `Performance(ns/day) / 10 ns`. For 
 example, if the best achievable performance is 250 ns/day, the final 
-strong-scaling metric is `n_{jobs} = 250 / 10 = 25`. This number should 
+strong-scaling metric is `n_{jobs} = 250 / 10 = 25`. This number must 
 be entered into the benchmark matrix spreadsheet, separately for phase 1 
 and phase 2.
 

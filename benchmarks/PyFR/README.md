@@ -9,7 +9,7 @@ to the PyFR benchmark suite are to be found in the subdirectory
 
 ### Obtaining the source code
 
-PyFR version 1.9.0 should be used for all benchmark runs.
+PyFR version 1.9.0 must be used for all benchmark runs.
 The source code can be downloaded from http://www.pyfr.org/download.php,
 but PyFR can also be installed using pip: `pip install pyfr==1.9.0`.
 
@@ -29,7 +29,7 @@ in the GitHub repository https://github.com/PyFR/PyFR for details.
 Modifications to the PyFR source code are acceptable as long as any
 modification, for example new compute kernels or optimizations to
 existing kernels, must be made available for integration in the
-PyFR source code. Modifications should also not be problem-specific.
+PyFR source code. Modifications must also not be problem-specific.
 
 
 ## Installation guide
@@ -140,7 +140,7 @@ from the publication:
 "High-Order Implicit Large-Eddy Simulations of
 Flow over a NACA0021 Aerofoil" AIAA JOURNAL, Vol. 55, No. 7, July 2017
 (https://arc.aiaa.org/doi/suppl/10.2514/1.J055304).  
-It should be run in two modes: single-precision and double-precision.
+It must be run in two modes: single-precision and double-precision.
 
 
 Input files can be found under [NACA0021/](./NACA0021). The main files are:
@@ -162,7 +162,7 @@ run to correspond to the number of devices used in that run.
 
 Several sections of the configuration file can be updated.
 In the section "[backend]"
-the "precision" parameter should be set to both single and double
+the "precision" parameter must be set to both single and double
 to produce two sets of results. 
 
 The rank-allocator keyword specifies the 
@@ -224,13 +224,13 @@ This benchmark is of the "strong scaling" type and will be evaluated
 on the best performance possible on the suggested system.
 Simulations should be run on increasing number of nodes/devices 
 until no gain in performance is observed. This
-procedure should be performed in both single and double precision,
+procedure must be performed in both single and double precision,
 which is controlled with the `precision` input parameter in the .ini
-file. Performance numbers for both cases should be reported (see
+file. Performance numbers for both cases must be reported (see
 below).
 
 A "warm-up" phase has already been run for this case, and the
-benchmark runs should be performed through a restart from a mesh
+benchmark runs must be performed through a restart from a mesh
 (.pyfrm file) and a solution file (.pyfrs) resulting from the warm-up
 run.  To run on `N` devices, the mesh and the solution needs to be
 partitioned into `N` parts with the `pyfr partition` command.   
@@ -265,7 +265,7 @@ $ h5dump -d stats naca-XXX.XX.pyfrs
 The total wall-clock time is reported in the variable "wall-time" 
 and the number of steps in the "nsteps" variable. 
 The performance is quantified by nsteps/walltime and 
-should be calculated from the first two solution files as:
+can be calculated from the first two solution files as:
 Performance = (nsteps_2 - nsteps_1) / (wall-time_2 - wall-time_1)
 
 For the case when dt-out=0.1 (see above), the first two solution files 
@@ -279,14 +279,14 @@ the entire machine).
 a simulation time of 0.1, e.g. between simulation times 100.10 and 100.20.**
 
 To calculate the number of jobs per day the strong-scaling formula 
-should be used:
+must be used:
 `n_{jobs} = t_{day} / t`  
 where:
  - `t_{day}` = time in a day (86400 s)
  - `t` = average time to run one job in the shortest possible time for this benchmark 
  - n_{jobs} = number of jobs that can be run in one day for this benchmark.
 
-`n_{jobs}` should be entered into the benchmark matrix spreadsheet.
+`n_{jobs}` must be entered into the benchmark matrix spreadsheet.
 
 
 

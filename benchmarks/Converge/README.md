@@ -40,11 +40,11 @@ libraries.
 ## Performance considerations
 
 ConvergeCFD comes with pre-built binaries and vendors should only
-select which MPI library should be used.
+select which MPI library to be used.
 
 ## Benchmark cases
 
-One benchmark case should be run on varying number of nodes.
+This benchmark case should be run on varying number of nodes.
 All required input and parameter files can be found in the 
 [FlameD-50M/](./FlameD-50M) directory.
 
@@ -66,11 +66,11 @@ mpirun -n $NPROCS converge-ompi super > log.converge.$SLURM_JOBID 2>&1
 
 ### Obtaining benchmark results
 
-The benchmark should be run on the smallest number of nodes on which the benchmark runs and then using a steadily increasing number of nodes until the absolute performance stops improving. It will be assumed that any results using a larger number of nodes than is provided will not give improved performance.
+The benchmark must be run on the smallest number of nodes on which the benchmark runs and then using a steadily increasing number of nodes until the absolute performance stops improving. It will be assumed that any results using a larger number of nodes than is provided will not give improved performance.
 
-Enough intermediate data points between the largest run and the smallest run should also be given so that the expected performance on any number of nodes on which the job could be run can be inferred through interpolation with reasonable confidence.
+Enough intermediate data points between the largest run and the smallest run must also be given so that the expected performance on any number of nodes on which the job could be run can be inferred through interpolation with reasonable confidence.
 
-Both the best possible performance and results for each data point should be entered into the benchmark report.
+Both the best possible performance and results for each data point must be entered into the benchmark report.
 
 ## Contact
 

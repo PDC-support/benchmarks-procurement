@@ -11,7 +11,7 @@ kinetic level via a discrete Boltzmann equation. PowerFLOW is widely
 applied in transportation industry sectors, including automotive,
 commercial vehicle and aircraft.
 
-The benchmark case for PowerFLOW contains one test case which should
+The benchmark case for PowerFLOW contains one test case which must
 be run with version 6-2019 of PowerFLOW. The two necessary files are
 located in the subdirectory BC_01.  In addition an example submit file
 is included below adapted for a Cray system running SLURM.
@@ -22,7 +22,7 @@ is included below adapted for a Cray system running SLURM.
 
 The vendors should contact PDC (ragge@pdc.kth.se) to get access to a
 RLM license server at PDC for the benchmarking test, if required. 
-Version 6-2019 of Powerflow should be used for the benchmark.
+Version 6-2019 of Powerflow must be used for the benchmark.
 
 Powerflow 6-2019 can be acquired from [www.3ds.com](https://www.3ds.com/).
 
@@ -72,7 +72,7 @@ export NPROCS=1280
 #export NPROCS=640
 #export NPROCS=320
 
-# Number of timesteps, should not be changed
+# Number of timesteps, must not be changed
 export NUM_TIMESTEPS=10000
 
 # load PowerFLOW module
@@ -113,12 +113,12 @@ that can be performed on the total system in one day, according to the
 throughput formula.
 
 We require a *minimum performance*: the average runtime (simulation
-time) should not be larger than 3600 seconds (i.e. "real time" should
+time) must not be larger than 3600 seconds (i.e. "real time" must
 not be larger than 3600 s).
 
 ### Allowed changes to input files
 
-The .cdi and .lgi should not be changed. The number of cores and nodes
+The .cdi and .lgi must not be changed. The number of cores and nodes
 need to be adjusted to fit on the system. Note that PowerFLOW requires
 an extra node used as a masternode, see the example 
 submit file above for details.
@@ -140,7 +140,7 @@ The execution time should be extracted from the file
 `powerflow_simulate_fine.[jobid].log`
 
 The simulation time is right after "Simulation time". The value for
-the initialization time found after "Initialization time" should also
+the initialization time found after "Initialization time" must also
 be included in the total time.
 
 This benchmark will be evaluated by the throughput metric, i.e. how
@@ -148,7 +148,7 @@ many jobs can be completed on the tendered system in one day.
 This number should represent 
 an average and does not need to be an integer.
 To calculate the number of jobs per day the throughput formula 
-should be used:  
+must be used:  
 `n_{jobs} = t_{day} / t * N_{tot} / N`
 
 where
@@ -158,7 +158,7 @@ where
 - `N` = number of nodes used to run this benchmark
 - `n_{jobs}` = number of jobs that can be run in a day for this benchmark 
 
-`n_{jobs}` should be entered into the benchmark matrix spreadsheet.
+`n_{jobs}` must be entered into the benchmark matrix spreadsheet.
 
 
 ## Contact

@@ -37,7 +37,7 @@ with makefiles `makenek` and `makenek.inc`.
 Modifications to the Nek5000 source code are acceptable as long as any
 modifications are made available to the Nek5000 development team 
 before acceptance benchmark runs on the delivered system.
-All modifications should be general and not problem-specific.
+All modifications must be general and not problem-specific.
 
 Modifications of the makefiles are also permitted, i.e. the 
 files `makenek` and `makenek.inc`.
@@ -60,7 +60,7 @@ the compilation process, need to be adapted to the compilation
 environment used.
 
 Out-of-source compilation should be done in, e.g., the run directory
-`pnpn/`. The build script `pnpn/makenek` should be adjusted and
+`pnpn/`. The build script `pnpn/makenek` must be adjusted and
 compilation flags can be modified below line 196 in the file
 `nek/makenek.inc`.  The benchmark case is compiled with the command
 `makenek pipe`.
@@ -84,7 +84,7 @@ proposed machine. In general it is expected that the highest
 performance will be obtained when the number of MPI ranks is a factor
 of two, but it is permissible to run on core counts which are not
 factors of two if it gives better performance. **Full nodes (all cores 
-per node)should be used for the benchmark runs**.
+per node) must be used for the benchmark runs**.
 
 Only one metric is used to evaluate the benchmark which is
 proportional to the time to solution.  Vendors should run the
@@ -116,7 +116,7 @@ less than 15 for the last 20 time steps.
 
 ### Obtaining benchmark results
 
-Vendors should provide information from the Nek5000 stdout, which
+Vendors must provide information from the Nek5000 stdout, which
 can be redirected to a file. 
 After running 50 steps, the simulation will print a line containing 
 "overhead" which shows the total execution time for the last 20 steps.
@@ -129,19 +129,19 @@ given that only one job runs at the time (one job has access to the
 entire machine).  **One job for Nek5000 is considered to be the last
 20 steps of the simulation**.  
 To calculate the number of jobs per day
-the strong-scaling formula should be used:   
+the strong-scaling formula must be used:   
 `n_{jobs} = t_{day} / t`  
 where: 
 - t_{day} = time in a day (86400 s) 
 - t = average time to run one job (last 20 timesteps) for this benchmark 
 - n_{jobs} = number of jobs that can be run in one day for this benchmark
 
-`n_{jobs}` should be entered into the benchmark matrix spreadsheet.
+`n_{jobs}` must be entered into the benchmark matrix spreadsheet.
 
 
 
 Information on which compiler was used (vendor and version number)
-should also be provided as additional information in the benchmark report, 
+must also be provided as additional information in the benchmark report, 
 together with the modified makenek and makenek.inc scripts used.
 
 ## Contact

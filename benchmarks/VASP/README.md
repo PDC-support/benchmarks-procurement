@@ -1,6 +1,6 @@
 # VASP benchmarks 
 
-The VASP benchmark contains one test case which should be run with VASP 
+The VASP benchmark contains one test case which must be run with VASP 
 version 6.1.0. All the input files to run the case can be found in the 
 subdirectory [GaAsBi512](GaAsBi512/README.md).
 
@@ -8,7 +8,7 @@ subdirectory [GaAsBi512](GaAsBi512/README.md).
 
 ### Obtaining the source code
 
-The version should be VASP 6.1.0. The software is not included with
+The version must be VASP 6.1.0. The software is not included with
 this benchmark package archive. Getting this software is the
 responsibility of the Tenderer. PDC does not have the redistribution
 rights of this software. From the VASP download site
@@ -95,7 +95,7 @@ Observe that the Bi_d and not the Bi POTCAR must be used.
 
 ### Allowed changes to input files
 
-POSCAR, POTCAR and KPOINTS files should not be changed. 
+POSCAR, POTCAR and KPOINTS files must not be changed. 
 In INCAR you are allowed to adjust the following settings:
 
 1. NSIM  
@@ -130,8 +130,8 @@ This VASP benchmark will be evaluated according to how many jobs can
 be performed on the total system in one day, according to the
 throughput formula.
 
-We require a *minimum performance*: the average runtime should not be
-larger than 300 seconds (i.e. "real time" should not be larger than
+We require a *minimum performance*: the average runtime must not be
+larger than 300 seconds (i.e. "real time" must not be larger than
 300 s).
 
 ### Obtaining benchmark results
@@ -145,7 +145,7 @@ many jobs can be completed on the tendered system in one day.
 This number should represent 
 an average and does not need to be an integer.
 To calculate the number of jobs per day the throughput formula 
-should be used:  
+must be used:  
 `n_{jobs} = t_{day} / t * N_{tot} / N`
 
 where
@@ -155,7 +155,7 @@ where
 - `N` = number of nodes used to run this benchmark
 - `n_{jobs}` = number of jobs that can be run in a day for this benchmark 
 
-`n_{jobs}` should be entered into the benchmark results spreadsheet.
+`n_{jobs}` must be entered into the benchmark results spreadsheet.
 
 
 ## Contact

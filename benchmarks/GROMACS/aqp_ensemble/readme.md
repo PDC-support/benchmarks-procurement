@@ -18,7 +18,7 @@ file](./inputs//README)
 
 For this benchmark an ensemble run, called multi-simulation in
 GROMACS, is used. The supplied example uses a 32 member ensemble, and
-this is the number of ensemble members that should be used. The
+this is the number of ensemble members that must be used. The
 ensemble simulation mode of the ``mdrun`` tool requires one directory
 per ensemble member simulation.  As the AWH algorithm employed uses
 identical input files, a single tpr input can be created and symlinked
@@ -73,11 +73,11 @@ simulation throughput across the ensemble.
 
 The benchmark can be run on any amount of resources which satisfies 
 the following minimum performance constraints:
-- On phase 1, the performance per replica should not be lower than 80 ns/day
-- On phase 2, the performance per replica should not be lower than 200 ns/day
+- On phase 1, the performance per replica must not be lower than 80 ns/day
+- On phase 2, the performance per replica must not be lower than 200 ns/day
 
 It is not necessary to fully populate the nodes if it gives superior
-performance, but this should be clearly explained in the benchmark
+performance, but this must be clearly explained in the benchmark
 report.
 
 Vendors may make a free choice of the number of PME nodes that can

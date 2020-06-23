@@ -19,7 +19,7 @@ The official CP2K releases can be obtained from the [download
 webpage](https://www.cp2k.org/download) and the [GitHub project
 page](https://github.com/cp2k/cp2k/releases/).
 
-For the benchmark the CP2K 7.x series should be used.
+For the benchmark the CP2K 7.x series must be used.
 
 ### License
 
@@ -30,7 +30,7 @@ CP2K is distributed under the GPL license.
 Modifications to the CP2K source code are acceptable as long as any
 modifications are made available to the CP2K development team
 before acceptance benchmark runs on the delivered system.
-All modifications should be general and not problem-specific.
+All modifications must be general and not problem-specific.
 Modifications of the makefiles are permitted.
 
 
@@ -45,7 +45,7 @@ instructions](https://github.com/cp2k/cp2k/blob/master/INSTALL.md).
 This benchmark is particularly sensitive to network performance and to
 the performance of batched small matrix-matrix multiplications.
 To obtain optimal performance for small matrix-matrix multiplications,
-CP2K should be compiled with some of the libraries specified below.
+CP2K can be compiled with some of the libraries specified below.
 
 - [libxsmm](https://github.com/hfp/libxsmm): a library for specialized
   dense and sparse matrix operations targetting Intel
@@ -101,9 +101,9 @@ This CP2K benchmark will be evaluated according to how many jobs can
 be performed on the total system in one day, according to the 
 throughput formula.
 
-We require a minimum performance: the average runtime should not be
+We require a minimum performance: the average runtime must not be
 larger than 150 seconds (i.e. "TOTAL TIME / MAXIMUM" for the "CP2K"
-entry should not be larger than 150 s).
+entry must not be larger than 150 s).
 
 
 ### Obtaining benchmark results
@@ -118,7 +118,7 @@ many jobs can be completed on the tendered system in one day.
 This number should represent 
 an average and does not need to be an integer.
 To calculate the number of jobs per day the throughput formula 
-should be used:  
+must be used:  
 `n_{jobs} = t_{day} / t * N_{tot} / N`
 
 where
@@ -128,7 +128,7 @@ where
 - `N` = number of nodes used to run this benchmark
 - `n_{jobs}` = number of jobs that can be run in a day for this benchmark 
 
-`n_{jobs}` should be entered into the benchmark matrix spreadsheet.
+`n_{jobs}` must be entered into the benchmark matrix spreadsheet.
 
 
 ## Contact

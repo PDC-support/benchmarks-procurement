@@ -48,7 +48,7 @@ These will be evaluated as should-requirements or must-requirements.
 
 ## Synthetic benchmarks
 
-Synthetic benchmarks should be run on both Phase 1 and Phase 2.
+Synthetic benchmarks must be run on both Phase 1 and Phase 2.
 More details can be found in 
 [this folder](./benchmarks/Synthetic/).
 
@@ -91,8 +91,8 @@ points for all benchmark cases are provided in the file
 
 ## Benchmark report
 
-Each tender should include a benchmark report. This report 
-should contain:
+Each tender must include a benchmark report. This report 
+must contain:
 
 - A description of how benchmark software was compiled if 
   the compilation deviated from the standard, e.g. any additional 

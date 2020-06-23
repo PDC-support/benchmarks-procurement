@@ -26,11 +26,11 @@ available memory.
   available memory.
   - HPL, MPIFFT, PTRANS
 
-The results should be added to the Benchmark matrix spreadsheet
+The results must be added to the Benchmark matrix spreadsheet
 provided. Information on the compiler used (vendor and version)
-together with which numerical libraries were used should also be
+together with which numerical libraries were used must also be
 provided.  In addition the complete output for the runs (excluding
-projections) should also be provided.
+projections) must also be provided.
 
 ### DGEMM
 
@@ -44,7 +44,7 @@ This benchmark computes a[i] = b[i] + s*c[i] for long vectors of
 double precision floating point values where each such operation
 counts for 24 bytes of data access, i.e. two loads and one store. The
 reference implementation of the benchmark can be downloaded from
-https://www.cs.virginia.edu/stream/. The vector size used should be at
+https://www.cs.virginia.edu/stream/. The vector size used must be at
 least 75% of available memory either for the CPU or the
 accelerator. Multiple threads can be used to simultaneously process
 the requests, the vendor is also allowed to provide optimized
@@ -65,7 +65,7 @@ resides in a single contiguous location in the CPU-accessible memory,
 i.e. not on any external accelerator memory and the result has to be
 delivered in the same location, i.e. in-place. The FFT library can
 pre-plan execution of the transformation as well as request additional
-workspace of up to 512 MiB. The benchmark execution should only utilize 
+workspace of up to 512 MiB. The benchmark execution must only utilize 
 resources available on a single node.
 
 Unlike the other synthetic benchmarks, SingleFFT will be scored like
@@ -76,11 +76,11 @@ One job is considered to be the time it takes to perform the
 FFT (i.e. initialization etc. should not be included). To calculate the
 figure of merit, i.e. the number of SingleFFT "jobs" that can be
 performed on the total system in one day (separately for Phase 1 and
-Phase 2), the following formula should be used:  
+Phase 2), the following formula must be used:  
 `n_{jobs} = t_{day} / t * N_{tot}`  
 where `t_{day}=86400 s` is the number of seconds per day, `t` is the 
 time in seconds that it takes to compute the FFT and `N_{tot}` is the 
-total number of nodes tendered. The quantity `n_{jobs}` should be 
+total number of nodes tendered. The quantity `n_{jobs}` must be 
 reported in the benchmark matrix spreadsheet.
 
 ### HPL
@@ -94,9 +94,9 @@ algorithm must be 2/3 n^3 + O(n^2) double precision floating-point
 operations, the benchmark software must be obtained from
 http://www.netlib.org/benchmark/hpl/ and must not be modified. The
 vendor is free to supply the required linear algebra and MPI
-libraries. The used parameter file, hpl.dat, has to be included in the
+libraries. The used parameter file, hpl.dat, must be included in the
 response, alternatively, e.g. in the case of performance projections,
-a suggested parameter file should be included and the vendor is
+a suggested parameter file must be included and the vendor is
 obliged to run the HPL benchmark at the time of delivery to
 demonstrate that the system meets or exceeds the claimed performance.
 
@@ -110,7 +110,7 @@ presence of interference from simultaneous jobs. It was presented at
 SC19 [https://doi.org/10.1145/3295500.3356215] and the benchmark
 source can be downloaded from
 https://xgitlab.cels.anl.gov/networkbench/GPCNET. Performance for this
-benchmark should be stated for running at full system size and all
+benchmark must be stated for running at full system size and all
 targets are given for the 99% percentile, i.e. 99% of all executed
 tests in the benchmark code must meet or exceed the target. The
 following characteristics are requested: Random-ring latency for small
@@ -133,10 +133,10 @@ used, i.e. a single 100 Gbit/s port requires 4 processes whereas two
 
 Maybe ask Mattias for the specific setup that we would like, but I
 would propose the following: read and write from multiple clients to a
-single file, at least 10% of total node count. The data written should
+single file, at least 10% of total node count. The data written must
 be at least the aggregate main-memory size of the system or at least
-5% of the file-system size. The test should use MPI-IO for a MPI
-library provided by the vendor. Write performance should be attainable
+5% of the file-system size. The test must use MPI-IO for a MPI
+library provided by the vendor. Write performance must be attainable
 for both the case of pre-existing and newly created files. The
 benchmark is available from https://github.com/hpc/ior/releases/tag/3.2.1.
 
