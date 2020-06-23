@@ -96,12 +96,11 @@ exaqsub -xe6_decomp \
 
 Note that the `-xe6_decomp` and `-xe6` flags are specific for the 
 Cray architecture of Beskow and should be removed or replaced by 
-other flags for other architectures.
+other flags for other architectures. 
+
 The `exaqsub` command has many possible options that can be listed by 
 `exaqsum -h`. Any flag can be used in the categories 
-"MPI Implementation Options" and "MPI Interconnect Options". 
-For questions on possible runtime options for this benchmark please 
-see the contact information below.
+"MPI Options", "MPI Implementation Options" and "MPI Interconnect Options". 
 
 On a SLURM system the simulation can be started through the command:
 `sbatch powerflow_simulate_fine_slurm.sh`
