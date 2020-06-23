@@ -34,9 +34,7 @@ results, modifications to the PowerFLOW source code are NOT permitted.
 ## Installation guide
 
 The benchmark does not require any specific flags, options, or
-environment variables to be compiled, but some flags may improve 
-performance. For questions on the compilation of PowerFLOW please 
-see the contact information below.
+environment variables to be compiled.
 
 ## Benchmark case
 
@@ -98,9 +96,14 @@ Note that the `-xe6_decomp` and `-xe6` flags are specific for the
 Cray architecture of Beskow and should be removed or replaced by 
 other flags for other architectures. 
 
-The `exaqsub` command has many possible options that can be listed by 
-`exaqsum -h`. Any flag can be used in the categories 
-"MPI Options", "MPI Implementation Options" and "MPI Interconnect Options". 
+The `exaqsub` command has many possible options that can be listed by
+`exaqsum -h`. There is normally no need to modify any flags since
+PowerFLOW automatically detects hardware and MPI configurations, but
+it is still recommended to explicitly set the interconnect using
+options from the "MPI Interconnect Options" section.  The Platform MPI
+option (`--hpmpi`) from the "MPI Implementation Options" section is
+default and normally performs better than the Intel MPI option.  Flags
+listed in the "MPI Options" section are not recommended.
 
 On a SLURM system the simulation can be started through the command:
 `sbatch powerflow_simulate_fine_slurm.sh`
