@@ -18,13 +18,11 @@ is included below adapted for a Cray system running SLURM.
 
 ## Source code
 
-### Obtaining licenses
+### Obtaining licenses and source code
 
-The vendors should contact PDC (ragge@pdc.kth.se) to get access to a
-RLM license server at PDC for the benchmarking test, if required. 
-Version 6-2019 of Powerflow must be used for the benchmark.
-
-Powerflow 6-2019 can be acquired from [www.3ds.com](https://www.3ds.com/).
+The vendors should contact PDC (ragge@pdc.kth.se) to get access to a RLM 
+license server at PDC and the PowerFLOW source code for the benchmarking test, 
+if required. Version 6-2019 of Powerflow must be used for the benchmark.
 
 ### Guidelines for Porting and Modifying the Source Code
 
