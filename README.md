@@ -20,20 +20,14 @@ should be obtained can be found in the document
 [benchmark-description.pdf](./benchmark-description.pdf).
 
 The list of synthetic benchmarks contains standard benchmark tests.
-These will be evaluated as should-requirements or must-requirements,
-except for the FFT synthetic benchmark which will be evaluated as a
+The result from these benchmarks will be used to reply to
+should-requirements or must-requirements in the Tender document,
+except for the FFT synthetic benchmark which will be used as a
 throughput benchmark. For details see the
 [benchmarks/Synthetic](./benchmarks/Synthetic) folder.
 
-A score will be awarded to tenders based on reported performance on
-all application benchmarks as well as the FFT synthetic
-benchmark. Each application benchmark case has been assigned a
-maximum number of points based on historical usage of PDC and SNIC
-resources. A list of available maximum points and a description of the
-scoring and ranking process is provided in the procurement document.
-
 A benchmark report should accompany each tender. A list of
-requirements on the benchmark report can be found in the procurement
+requirements on the benchmark report can be found in the Tender
 document.
 
 ## Contact
