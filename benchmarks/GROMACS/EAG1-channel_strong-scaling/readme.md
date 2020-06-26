@@ -6,7 +6,7 @@ For a description of this case please see the [benchmark README file](./inputs/R
 
 ### Benchmark input files
 
-- the main simulation input file is [topol.tpr](./inputs/topol.tpr)
+- the main simulation input file is [topol.tpr](./inputs/topol.tpr.gz)
 - the above input file can re-generated using the ``gmx grompp -n index.ndx`` as the full set of original input files is included in the [input directory](./inputs/)
 
 ## Performance aspects
