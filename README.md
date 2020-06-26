@@ -21,8 +21,8 @@ The benchmark suite is composed of application benchmarks and
 synthetic benchmarks. The list of application benchmarks contains
 research software packages heavily used in HPC, i.e. Gromacs, Nek5000,
 VASP, PowerFLOW, Converge, PyFR and CP2K-Quickstep.  See [the list of
-application benchmarks](./application-benchmarks.md) for an overview
-of all application benchmarks and the [benchmarks](./benchmarks)
+benchmarks](./benchmarks/README.md) for an overview of all benchmarks
+and corresponding subdirectories of the [benchmarks](./benchmarks)
 folder for detailed documentation of each benchmark case.
 
 The list of synthetic benchmarks contains standard benchmark tests.
