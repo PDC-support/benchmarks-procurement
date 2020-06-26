@@ -1,4 +1,4 @@
-# GROMACS Aquaporin ensemble scaling benchmark
+# GROMACS Aquaporin ensemble benchmark
 
 For a description of this case please see the [benchmark README
 file](./inputs//README)
