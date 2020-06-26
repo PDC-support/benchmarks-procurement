@@ -18,7 +18,7 @@ nodes of module 1 and 2 should be submitted.
 
 Unlike the other synthetic benchmarks, the FFT benchmark will be scored like
 an application benchmark of the throughput type. See
-[benchmark-description.pdf](../../../../benchmark-description.pdf) for
+[benchmark-description.pdf](../../../benchmark-description.pdf) for
 details, particularly Equation 1.  
 One job is considered to be the time it takes to perform the
 FFT (i.e. initialization etc. should not be included). To calculate the
