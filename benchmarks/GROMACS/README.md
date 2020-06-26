@@ -37,7 +37,7 @@ Public License (LGPL) Version 2.1; for further details see the
 Modifications to the GROMACS source code are acceptable as long as any
 modification, for example new compute kernels or optimizations to
 existing kernels, must be made available for integration in the
-GROMACS source code.  Specifically, the winning vendor must provide
+GROMACS source code.  Specifically, the winning tender must provide
 any modifications formatted to follow the [GROMACS contribution
 guidelines](http://manual.gromacs.org/documentation/current/dev-manual/contribute.html),
 and submit them for [code
