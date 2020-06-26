@@ -29,7 +29,7 @@ supercomputers.
 
 ### Obtaining the source code
 
-The source code is located in the [nek/](nek/) subfolder together 
+The source code is located in the `nek/` subfolder together 
 with makefiles `makenek` and `makenek.inc`.
 
 ### Guidelines for Porting and Modifying the Source Code
