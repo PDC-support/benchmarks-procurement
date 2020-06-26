@@ -9,7 +9,7 @@ to the PyFR benchmark suite are to be found in the subdirectory
 
 ### Obtaining the source code
 
-PyFR version 1.9.0 must be used for all benchmark runs.
+PyFR version 1.9.0 or newer must be used for all benchmark runs.
 The source code can be downloaded from http://www.pyfr.org/download.php,
 but PyFR can also be installed using pip: `pip install pyfr==1.9.0`.
 
