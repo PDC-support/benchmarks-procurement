@@ -28,7 +28,7 @@ throughput benchmark. For details see the
 
 A benchmark report should accompany each tender. A list of
 requirements on the benchmark report can be found in the Tender
-document.
+document Part 5.
 
 ## Contact
 
