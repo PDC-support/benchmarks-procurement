@@ -12,7 +12,7 @@ file](./inputs//README)
   [input directory](./inputs/) and the ``topol.tpr`` input file can
   re-generated using the ``gmx grompp`` tool;
 - Ensemble setup directory tree is provided in the
-  [ensemble_setup.tar.gz archive](./inputs/ensemble_setup.tar.gz)
+  [ensemble_inputs.tar.gz archive](./inputs/ensemble_inputs.tar.gz)
 
 ### Generating the inputs for the ensemble run
 
