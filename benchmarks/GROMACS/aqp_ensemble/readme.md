@@ -24,7 +24,7 @@ per ensemble member simulation.  As the AWH algorithm employed uses
 identical input files, a single tpr input can be created and symlinked
 in each of the output directories.
 
-The the (bash) shell script code below shows the steps to re-create
+The (bash) shell script code below shows the steps to re-create
 the 32 inputs which are provided in
 [ensemble_setup.tar.gz archive](./inputs/ensemble_setup.tar.gz).
 ```
