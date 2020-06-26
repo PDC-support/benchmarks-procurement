@@ -24,7 +24,7 @@ webpage](http://manual.gromacs.org) with the most recent release under
 the ["Latest releases
 section"](http://manual.gromacs.org/#latest-releases).
 
-**For the benchmarks the GROMACS 2020.1 release must be used.**
+**For the benchmarks the GROMACS 2020.1 release or more recent must be used.**
 
 ### License
 
