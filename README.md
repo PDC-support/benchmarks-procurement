@@ -3,32 +3,34 @@
 This repository contains information about the benchmark suite used in
 the procurement process for a new PDC system in 2020-2021.
 
-The benchmark suite is composed of *throughput* and *strong-scaling*
-benchmark cases which differ in how they should be run and in the
-figure of merit on which they will be evaluated.  A detailed
-description of how the figures of merit for each type of benchmark
-should be obtained can be found in the document
-[benchmark-description.pdf](./benchmark-description.pdf).
-
-A score will be awarded to tenders based on reported performance on
-all application benchmarks as well as the SingleFFT synthetic
-benchmark.  Each application benchmark case has been assigned a
-maximum number of points based on historical usage of PDC and SNIC
-resources. A list of available maximum points and a description of the
-scoring and ranking process is provided in the procurement document.
-
 The benchmark suite is composed of application benchmarks and
 synthetic benchmarks. The list of application benchmarks contains
 research software packages heavily used in HPC, i.e. Gromacs, Nek5000,
-VASP, PowerFLOW, Converge, PyFR and CP2K-Quickstep.  See [the list of
+VASP, PowerFLOW, Converge, PyFR and CP2K-Quickstep, while the synthetic 
+benchmarks include standard benchmark tests. See [the list of
 benchmarks](./benchmarks/README.md) for an overview of all benchmarks
 and corresponding subdirectories of the [benchmarks](./benchmarks)
 folder for detailed documentation of each benchmark case.
 
+The application benchmarks are either of a *throughput* and
+*strong-scaling* type, which differ in how they should be run and in
+the figure of merit on which they will be evaluated.  A detailed
+description of how the figures of merit for each type of benchmark
+should be obtained can be found in the document
+[benchmark-description.pdf](./benchmark-description.pdf).
+
 The list of synthetic benchmarks contains standard benchmark tests.
-These will be evaluated as should-requirements or must-requirements.
-For details see the [benchmarks/Synthetic](./benchmarks/Synthetic)
-folder.
+These will be evaluated as should-requirements or must-requirements,
+except for the FFT synthetic benchmark which will be evaluated as a
+throughput benchmark. For details see the
+[benchmarks/Synthetic](./benchmarks/Synthetic) folder.
+
+A score will be awarded to tenders based on reported performance on
+all application benchmarks as well as the FFT synthetic
+benchmark. Each application benchmark case has been assigned a
+maximum number of points based on historical usage of PDC and SNIC
+resources. A list of available maximum points and a description of the
+scoring and ranking process is provided in the procurement document.
 
 A benchmark report should accompany each tender. A list of
 requirements on the benchmark report can be found in the procurement
