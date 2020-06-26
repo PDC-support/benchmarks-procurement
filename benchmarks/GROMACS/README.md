@@ -10,9 +10,9 @@ Gromacs is a highly efficient and optimized code for Molecular
 Dynamics simulations developed by groups at KTH and Uppsala
 University. The software is compliant with the C99 and C++11 standards
 and supports many hardware specific extensions such as SSE and
-AVX. The code can make efficient use of CUDA capable GPUs as
-well. FFTW is the only definitely required external library but the
-Gromacs build system is able to compile it on demand.
+AVX. The code can make efficient use of GPUs as well. FFTW is the only
+definitely required external library but the Gromacs build system is
+able to compile it on demand.
 
 ## Source code
 
