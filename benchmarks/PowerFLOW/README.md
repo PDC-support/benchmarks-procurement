@@ -20,9 +20,10 @@ is included below adapted for a Cray system running SLURM.
 
 ### Obtaining licenses and source code
 
-The vendors should contact PDC (ragge@pdc.kth.se) to get access to a RLM 
-license server at PDC and the PowerFLOW source code for the benchmarking test, 
-if required. Version 6-2019 of Powerflow must be used for the benchmark.
+The vendors should contact PDC (powerflow-benchmark@pdc.kth.se) to get
+access to a RLM license server at PDC and the PowerFLOW source code
+for the benchmarking test, if required. Version 6-2019 of Powerflow
+must be used for the benchmark.
 
 ### Guidelines for Porting and Modifying the Source Code
 
@@ -118,7 +119,7 @@ not be larger than 3600 s).
 
 ### Allowed changes to input files
 
-The .cdi and .lgi must not be changed. The number of cores and nodes
+The .cdi and .lgi files must not be changed. The number of cores and nodes
 need to be adjusted to fit on the system. Note that PowerFLOW requires
 an extra node used as a masternode, see the example 
 submit file above for details.
