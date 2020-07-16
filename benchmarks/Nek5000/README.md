@@ -5,6 +5,8 @@ for the Nek5000 benchmark. The directory structure is as follows:
 - `ReTau1000/nek/`: source code and makefiles
 - `ReTau1000/rs8_restart/`: restart files for the benchmark run
 - `ReTau1000/pnpn/`: run directory with input files
+Note that these folders are available for download on KTH-Box, see
+[the readme file under ReTau1000/](./ReTau1000/readme).
 
 Nek5000 ( http://Nek5000.mcs.anl.gov ) is an open-source code for the
 simulation of incompressible flow. Nek5000 is widely used in a broad
